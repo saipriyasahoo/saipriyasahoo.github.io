@@ -122,33 +122,42 @@ nav ul li a:hover::after{
     color: white;
     padding-bottom: 5px;
 }
- table{
-    margin-top: 50px ;
+.teb-contents{
+    margin-top: 30px ;
     width: 100%;
+    flex-basis: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
  }
-.tab-links{
-    text-align: center;
-    font-size: 22px;
-    background-color: #4bcbf1 ;
-    border-radius: 15px;
-    padding: 10px;  
-}
 .tab-contents{
-    margin: 10px;
-    background-color: rgba(242, 130, 113, 0.688);
+    width: 30%;
+    margin: 5px;
     color: white;
-    padding: 20px;
+    padding: 5px;
     border-radius: 20px;
 }
+.tab-links{
+    text-align: center;
+    font-size: 20px;
+    background-color: #4bcbf1 ;
+    border-radius: 15px;
+    padding: 10px; 
+}
 .tab-contents ul{
-    padding: 0;
+    padding: 10px;
+    background-color: rgba(242, 130, 113, 0.688);
+    border-radius: 10px;
+    margin-top: 10px;
 }
 .tab-contents ul li{
     list-style: none;
     margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 .tab-contents ul li span{
-    font-size: 18px;
+    font-size: 16px;
 }
 /* --------Project-------- */
 #project{
@@ -311,7 +320,208 @@ button:hover {
     background: #e62e25;
 }
 
-/* media query */
+@media screen and (max-width: 480px){
+    *{
+        overflow-x: hidden;
+    }
+    body{
+        position:relative;
+    }
+    nav{
+        height: 90px;
+        padding: 0 15px;
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+    }
+    .menu-bar-tags{
+        overflow-y: visible;
+    }
+    .logo{
+        width: 100px;
+        align-items: center;
+    }
+    nav ul li{
+        margin: 0 10px;
+    }
+    nav ul li a{
+        font-size: 14px;
+    }
+    #header{
+        margin-top: 90px;
+        background-position: top center;
+        background-size: contain;
+    }
+    .header-text{
+        margin-top: 40%;
+        margin-right: 0%;
+    }
+    .header-text h1{
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 40px;
+    }
+    .header-text p{
+        text-align: left;
+        margin-top:  0;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+    .header-text .p2{
+        text-align: center;
+        font-size: 15px;
+    }
+    .profile{
+        margin-top: 20%;
+        margin-left: 56px;
+        margin-right: 56px;
+    }
+    .profile p{
+        font-size: 14pt;
+    }
+    /* ----------------About section------------------- */
+    .row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    .about-col-1{
+        flex-basis: 100%;
+    }
+    .sub-title{
+        margin-bottom: 20px;
+    }
+    .about-col-1 p{
+        padding-bottom: 20px;
+    }
+    .about-col-2{
+        flex-basis: 100%;
+        height: 0;
+        background: none;
+        text-align: center;
+    }
+    .about-col-2 img{
+        width: 17%;
+        border-radius: 100px;
+        object-fit: cover;
+        position: absolute;
+    }
+    .profile-pic{
+        border-radius: 0;
+        margin-top: 0;
+        float: right;
+        right: 25px;
+        top: 27.3%;
+    }
+    .sub-title{
+        font-size: 40px;
+        padding-bottom: 5px;
+    }
+    /* -----------------Project-------- */
+.project-title{
+    font-size: 40px;
+    padding-left: 0;
+}
+.project-tabs-1 p{
+    font-size: 12pt;
+}
+.row-2{
+    display: flex;
+    flex-direction: column;
+}
+.project-tabs-1{
+    flex-basis: 100%;
+    padding: 0;
+}
+.project-tabs-2{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.box-1{
+    background: none;
+    height: 160px;
+    width: 120px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: none;
+    margin: 15px 0;
+}
+.box-1 h2{
+    display: none;
+}
+.box-1 p{
+    display: none;
+}
+.icon{
+    margin: 10px;
+    border-radius: 15px;
+}
+.view-project{
+    display: inline-block;
+
+}
+.view-project:hover{
+    background-color: #e65c2b;
+}
+.project-links p{
+    text-align: left;
+    padding-left: 10px;
+}
+/* ------------------Contact Me------------- */
+.contact-me{
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+.contact-row-1{
+    background: none;
+    height: 0;
+    border-radius: 0;
+    flex-basis: 100%;
+}
+.contact-row-1{
+    margin-left: 0;
+}
+.contact-icon{
+    display: flex;
+}
+.contact-icon li{
+    padding: 10px;
+}
+.contact-information{
+    display: none;
+}
+.contact-row-2{
+    flex-basis: 100%;
+    margin-right: 0;  
+}
+.contact-title{
+    font-size: 40px;
+}
+}
+
+@media screen and (max-width:445px) and (min-width:401px){
+    .about-col-2 img{
+        display: none;
+    }
+    .profile-pic{
+        display: none;
+        /* border-radius: 0;
+        margin-top: 0;
+        float: right;
+        right: 25px;
+        top: 10%; */
+    }
+}
+
+/* media query'--------------------------2 */
 @media screen and (max-width: 400px){
     *{
         overflow-x: hidden;
@@ -404,7 +614,7 @@ button:hover {
     }
     .about-col-2{
         flex-basis: 100%;
-        height: 150px;
+        height: 0;
         background: none;
         text-align: center;
     }
@@ -415,11 +625,12 @@ button:hover {
         position: absolute;
     }
     .profile-pic{
+        display: block;
         border-radius: 0;
         margin-top: 0;
         float: right;
         right: 25px;
-        top: 26.7%;
+        top: 26.8%;
     }
     .sub-title{
         font-size: 40px;
@@ -512,11 +723,6 @@ button:hover {
 }
 
 @media screen and (max-width:400px){
-    table{
-        display: block;
-        width: 100%;
-        margin-top: 0;
-    }
     .tab-titles{
         display: none;
     }
@@ -559,4 +765,50 @@ button:hover {
         padding: 10px;
         border-radius: 10px;
     }
+}
+
+@media screen and (max-width:480px){
+    .tab-titles{
+        display: none;
+    }
+    .tab-links{
+        display: block;
+    }
+    .teb-contents{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .tab-contents{
+        display: block;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        padding: 5px;
+        margin: 0;
+    }
+    .tab-contents:nth-child(1)::before {
+        content: "Education";
+    }
+
+    .tab-contents:nth-child(2)::before {
+        content: "Hard Skills";
+    }
+
+    .tab-contents:nth-child(3)::before {
+        content: "Soft Skills";
+    }
+
+    .tab-contents::before {
+        display: block;
+        font-weight: bold;
+        color: white;
+        font-size: 20px;
+        margin-bottom: 5px;
+        text-align: center;
+        background: rgba(75, 203, 241, 0.8);
+        padding: 10px;
+        border-radius: 10px;
+    }
+
 }
